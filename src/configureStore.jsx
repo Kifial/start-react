@@ -3,12 +3,13 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { app } from './reducers/index';
 
-const configureStore = () => {
+const configureStore = (preloadedState) => {
   const middlewares = [thunk];
   middlewares.push(createLogger());
 
   return createStore(
     app,
+    preloadedState,
     applyMiddleware(...middlewares)
   );
 };
