@@ -1,5 +1,5 @@
 import { IndexRoute, Route } from 'react-router';
-import App from '../containers/App/index.jsx';
+import App from '../application/App/index.jsx';
 import React from 'react';
 
 const routes = (

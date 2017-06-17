@@ -1,15 +1,14 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
-import { app } from './reducers/index';
+import { app } from './App/reducers/index';
 
-const configureStore = (preloadedState) => {
+const configureStore = () => {
   const middlewares = [thunk];
   middlewares.push(createLogger());
 
   return createStore(
     app,
-    preloadedState,
     applyMiddleware(...middlewares)
   );
 };
